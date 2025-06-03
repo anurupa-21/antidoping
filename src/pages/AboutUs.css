@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Roboto:wght@400;700&display=swap');
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 60px 40px;
+}
+
+/* Section Styling */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #444;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 320px;
+  padding: 10px;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+/* Alternate Layout */
+.about-section:nth-child(even) .about-content:first-child {
+  order: 2;
+}
+
+/* Headings */
+.about-us {
+  font-family: 'Macondo', cursive;
+  font-size: 2.5rem;
+  color: #00e5ff;
+  margin-bottom: 20px;
+  border-left: 4px solid #00e5ff;
+  padding-left: 10px;
+  transition: color 0.3s ease;
+}
+
+.about-us:hover {
+  color: #1de9b6;
+}
+
+/* Paragraphs */
+.about-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #dcdcdc;
+  text-align: justify;
+}
+
+/* Footer */
+.about-footer {
+  background-color: #121212;
+  color: white;
+  padding: 30px 0 20px;
+  text-align: center;
+  border-top: 1px solid #444;
+  width: 100%;
+}
+
+.about-footer p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.footer-link {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Social Media */
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 6px;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .about-content {
+    order: 0 !important;
+  }
+
+  .about-image {
+    margin-bottom: 20px;
+  }
+
+  .about-us {
+    font-size: 2rem;
+  }
+
+  .about-paragraph {
+    font-size: 1rem;
+  }
+}
+
+@keyframes slideFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .about-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #dcdcdc;
+    text-align: justify;
+    animation: slideFadeIn 1s ease-out forwards;
+    opacity: 0; /* Ensure it's hidden initially */
+  }
+  

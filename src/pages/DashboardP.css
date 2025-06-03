@@ -1,0 +1,75 @@
+.dashboardp-container {
+  padding: 40px 50px;
+  background: #0f172a;
+  color: #f1f5f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.dashboardp-container h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #38bdf8;
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.overview {
+  margin-bottom: 40px;
+}
+
+.overview h2 {
+  font-size: 24px;
+  color: #60a5fa;
+  margin-bottom: 12px;
+}
+
+.overview-text {
+  font-size: 18px;
+  color: #cbd5e1;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #1e293b;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 220px;
+  box-shadow: 0 10px 15px rgba(56, 221, 248, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px rgba(56, 221, 248, 0.35);
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #0ea5e9;
+  letter-spacing: 0.03em;
+}
+
+.card p {
+  font-size: 38px;
+  font-weight: 700;
+  color: #e0f2fe;
+  margin: 0;
+}

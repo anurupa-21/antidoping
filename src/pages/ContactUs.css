@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Macondo&family=Playwrite:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Fallback font */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Upper Section with Background Image */
+.contact-header {
+    background-image: url('C:\Users\ANURUPA\Documents\Antidoping Project\anti-doping-auth\frontend\public\contact (2).png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Macondo', cursive, Arial, sans-serif; /* Use Macondo font */
+  } 
+.contact-header h1 {
+  font-size: 68px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-family:'Bebas Neue', sans-serif, Arial;/* sans-serif Bebas Neue for headings */
+  color: white;
+}
+
+.contact-header p {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.85;
+  position: absolute;
+  bottom: 10px;
+  animation: scrollTextHorizontal 10s linear infinite;
+  font-family: 'Playwrite', serif, Arial, sans-serif; /* Playwrite font for animated text */
+}
+
+/* Horizontal Moving Text Animation */
+@keyframes scrollTextHorizontal {
+  0% {
+    left: -50%;
+  }
+  50% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    left: 50%;
+  }
+}
+
+/* Bottom Section (Two Parts: Social Media and Form) */
+.contact-body {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 30px;
+  background-color: beige; /* Light background for contrast */
+}
+
+/* Left Part: Follow Us on Social Media */
+.social-media-container {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color:black;
+  font-family: 'Bebas Neue', sans-serif; /* Bebas Neue for headings */
+}
+
+.social-media-description {
+  font-size: 16px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: black;
+  font-family: 'Macondo', cursive, Arial, sans-serif; /* Use Macondo font */
+}
+
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Right Part: Contact Form */
+.contact-form-container {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:black;
+  font-family: 'Bebas Neue', sans-serif; /* Bebas Neue for headings */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  color:black;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  border-radius: 30px;
+  font-family: 'Macondo', cursive, Arial, sans-serif; /* Use Macondo font */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 30px; /* Make input fields elliptical */
+  border-color:black;
+  transition: border-color 0.3s;
+  font-family: 'Playwrite', serif, Arial, sans-serif; /* Playwrite font for inputs */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn {
+  background-color: #333;
+  color: white;
+  font-size: 18px;
+  padding: 14px;
+  border: none;
+  border-radius: 30px; /* Make the button elliptical */
+  border-color: black;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Playwrite', serif, Arial, sans-serif; /* Playwrite font for submit button */
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+.contact-footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contact-footer p {
+  margin: 0 0 10px;
+}
+
+.social-media-footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon-footer {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.social-icon-footer:hover {
+  transform: scale(1.2);
+}
