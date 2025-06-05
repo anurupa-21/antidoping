@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Macondo&family=Playwrite+IN:wght@100..400&display=swap');
+body {
+  font-family: 'Arial', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main Container - Athletics Story Page */
+.athletics-story {
+  background-color: #f4f4f4; /* Whitish-gray background for the story page */
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 500px;
+  overflow-y: auto;
+}
+
+/* Header Section */
+.story-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Add this for text and heading colors */
+.athletics-story h1,
+.athletics-story h2 {
+  color: #007bff; /* Blue headings */
+}
+
+.athletics-story p {
+  color: #000000; /* Black paragraph text */
+}
