@@ -10,7 +10,7 @@ const Home = () => {
         <Carousel interval={3000} indicators={true} controls={true}>
           <Carousel.Item>
             <img 
-              src="/background1.jpg" 
+              src="/background4.jpg" 
               alt="First slide" 
               className="d-block w-100" 
             />
@@ -22,7 +22,7 @@ const Home = () => {
 
           <Carousel.Item>
             <img 
-              src="/background2.png" 
+              src="/background1.jpg" 
               alt="Second slide" 
               className="d-block w-100" 
             />
@@ -34,7 +34,7 @@ const Home = () => {
 
           <Carousel.Item>
             <img 
-              src="/background4.jpg" 
+              src="/background2.png" 
               alt="Third slide" 
               className="d-block w-100" 
             />

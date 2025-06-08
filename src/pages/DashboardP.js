@@ -4,7 +4,7 @@ import './DashboardP.css';
 const DashboardP = () => {
   return (
     <div className="dashboardp-container">
-      <h1>Welcome Back, Player!</h1>
+      <h1>Welcome Back, Anurupa!</h1>
       <p className="subtitle">Your learning journey continues here</p>
 
       <section className="overview">

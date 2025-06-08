@@ -63,6 +63,23 @@ import LeaderBoard from './pages/LeaderBoard';
 import Certificate from './pages/Certificate';
 import AntiDopingNewsPage from './pages/AntiDopingNewsPage';
 import CommunityForumPage from './pages/CommunityForumPage';
+import AntiDopingProfile from './pages/AntiDopingProfile';
+import AntiDopingLogout from './pages/AntiDopingLogout';
+import AdminDashboard from './pages/AdminDashboard';
+import UserManagement from './pages/UserManagement';
+import QuizChallengeManagement from './pages/QuizChallengeManagement';
+import LearningResourcesManagement from './pages/LearningResourcesManagement';
+import AchievementsBadgesAdmin from './pages/AchievementsBadgesAdmin';
+import ProgressAnalytics from './pages/ProgressAnalytics';
+import LeaderboardSettings from './pages/LeaderboardSettings';
+import CertificateManagement from './pages/CertificateManagement';
+import AntiDopingAdminAnnouncement from './pages/AntiDopingAdminAnnouncement';
+import ForumModerationDashboard from './pages/ForumModerationDashboard';
+import PlatformSettingAdmin from './pages/PlatformSettingAdmin';
+import AuditLog from './pages/AuditLog';
+import AntiDopingAdminReports from './pages/AntiDopingAdminReports';
+import Monitoring from './pages/Monitoring';
+import Help from './pages/Help';
 
 
 
@@ -129,7 +146,24 @@ function App() {
       <Route path="/certificates" element={<Certificate/>} />
       <Route path="/news" element={<AntiDopingNewsPage/>} />
       <Route path="/community" element={<CommunityForumPage/>} />
-      
+          <Route path="/settings" element={<AntiDopingProfile/>} />
+          <Route path="/logout" element={<AntiDopingLogout/>} />
+         <Route path="/admin-dashboard" element={<AdminDashboard/>} />
+         <Route path="/admin/*" element={<AdminDashboard />} />
+         <Route path="/admin/users" element={<UserManagement />} />
+          <Route path="/admin/quizzes" element={<QuizChallengeManagement />} />
+         <Route path="/admin/resources" element={<LearningResourcesManagement />} />
+          <Route path="/admin/achievements" element={<AchievementsBadgesAdmin />} />
+          <Route path="/admin/analytics" element={<ProgressAnalytics />} />
+          <Route path="/admin/leaderboard" element={<LeaderboardSettings />} />
+          <Route path="/admin/certificates" element={<CertificateManagement />} />
+          <Route path="/admin/announcements" element={<AntiDopingAdminAnnouncement />} />
+           <Route path="/admin/moderation" element={<ForumModerationDashboard />} />
+            <Route path="/admin/settings" element={<PlatformSettingAdmin />} />
+              <Route path="/admin/audit" element={<AuditLog/>} />
+              <Route path="/admin/export" element={<AntiDopingAdminReports/>} />
+               <Route path="/admin/antidoping" element={<Monitoring/>} />
+               <Route path="/admin/help" element={<Help/>} />
           {/* Nested routes for PlayerDashboard */}
           <Route path="player-dashboard" element={<PlayerDashboard />}>
             {/* default child route (index) renders DashboardP */}

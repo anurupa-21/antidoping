@@ -85,7 +85,7 @@ const getActivityIcon = (type) => {
   }
 };
 
-const MyProgress = ({ playerName = "Alex Johnson" }) => {
+const MyProgress = ({ playerName = "Anurupa" }) => {
   useEffect(() => {
     const navbar = document.querySelector('.navbar');
     if (navbar) navbar.style.display = 'none';

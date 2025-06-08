@@ -11,7 +11,7 @@ const Certificate = () => {
       }, []);
     
   const [playerData, setPlayerData] = useState({
-    name: 'John Smith',
+    name: 'Anurupa Roy',
     id: 'AD2024-001',
     sport: 'Football',
     organization: 'International Sports Federation',

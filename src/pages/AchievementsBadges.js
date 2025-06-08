@@ -126,7 +126,7 @@ const badgesData = [
 
 const categories = ['All', 'Learning', 'Achievement', 'Engagement', 'Community', 'Competition'];
 
-const AchievementsBadges = ({ playerName = "Alex Johnson" }) => {
+const AchievementsBadges = ({ playerName = "Anurupa" }) => {
     useEffect(() => {
         const navbar = document.querySelector('.navbar');
         if (navbar) {

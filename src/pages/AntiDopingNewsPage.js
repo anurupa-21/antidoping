@@ -20,18 +20,20 @@ const AntiDopingNewsPage = () => {
 
   const newsData = useMemo(() => [
     {
-      id: 1,
-      title: "New WADA Guidelines for 2024 Anti-Doping Testing Procedures",
-      excerpt: "The World Anti-Doping Agency has released updated guidelines for testing procedures, including new protocols for biological passport monitoring and enhanced detection methods.",
-      content: "The comprehensive update includes stricter protocols for sample collection, improved chain of custody procedures, and advanced analytical techniques for detecting performance-enhancing substances.",
-      category: "guidelines",
-      author: "Dr. Sarah Mitchell",
-      date: "2024-12-18",
-      readTime: "5 min read",
-      featured: true,
-      urgent: false,
-      image: "https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=600&h=300&fit=crop"
-    },
+     
+  id: 1,
+  title: "New WADA Guidelines for 2024 Anti-Doping Testing Procedures",
+  excerpt: "The World Anti-Doping Agency has released updated guidelines for testing procedures, including new protocols for biological passport monitoring and enhanced detection methods.",
+  content: "The comprehensive update includes stricter protocols for sample collection, improved chain of custody procedures, and advanced analytical techniques for detecting performance-enhancing substances.",
+  category: "guidelines",
+  author: "Dr. Sarah Mitchell",
+  date: "2024-12-18",
+  readTime: "5 min read",
+  featured: true,
+  urgent: false,
+  image: "https://images.unsplash.com/photo-1582560475093-ba66accbc424?w=600&h=300&fit=crop",
+  url: "https://www.wada-ama.org/en/athletes-support-personnel/anti-doping-process"
+},
     {
       id: 2,
       title: "Major Olympic Doping Scandal: Three Athletes Suspended",
@@ -43,7 +45,8 @@ const AntiDopingNewsPage = () => {
       readTime: "3 min read",
       featured: true,
       urgent: true,
-      image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&h=300&fit=crop",
+      url: "https://www.history.com/articles/doping-scandals-through-history-list"
     },
     {
       id: 3,
@@ -56,7 +59,8 @@ const AntiDopingNewsPage = () => {
       readTime: "4 min read",
       featured: false,
       urgent: false,
-      image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=600&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=600&h=300&fit=crop",
+      url: "https://www.wada-ama.org/en/what-we-do/education-and-training/education-initiatives"
     },
     {
       id: 4,
@@ -69,7 +73,9 @@ const AntiDopingNewsPage = () => {
       readTime: "6 min read",
       featured: false,
       urgent: false,
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=300&fit=crop"
+    //   image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=300&fit=crop",
+    image: "https://media.licdn.com/dms/image/v2/D5612AQHi2wA7pJStMQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1736237873782?e=2147483647&v=beta&t=lyTMno0QB5V886iu1owCNK4RfYhTOFu1NxX6NECmWek",
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11208455/"
     },
     {
       id: 5,
@@ -82,7 +88,8 @@ const AntiDopingNewsPage = () => {
       readTime: "7 min read",
       featured: false,
       urgent: false,
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop",
+      url: "https://www.wada-ama.org/en/data-research/anti-doping-statistics"
     },
     {
       id: 6,
@@ -95,7 +102,8 @@ const AntiDopingNewsPage = () => {
       readTime: "4 min read",
       featured: false,
       urgent: false,
-      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=300&fit=crop"
+      image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=300&fit=crop",
+      url: "https://www.ftc.gov/policy/international/international-cooperation-agreements"
     }
   ], []);
 
@@ -125,6 +133,10 @@ const AntiDopingNewsPage = () => {
     
     setFilteredNews(filtered);
   }, [selectedCategory, searchTerm, newsData]);
+
+  const handleNewsClick = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   const pageStyles = {
     container: {
@@ -409,6 +421,7 @@ const AntiDopingNewsPage = () => {
               <div
                 key={news.id}
                 style={pageStyles.newsCard}
+                onClick={() => handleNewsClick(news.url)}
                 onMouseOver={(e) => {
                   e.currentTarget.style.transform = 'translateY(-8px)';
                   e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
@@ -459,6 +472,7 @@ const AntiDopingNewsPage = () => {
               <div
                 key={news.id}
                 style={pageStyles.regularNewsCard}
+                onClick={() => handleNewsClick(news.url)}
                 onMouseOver={(e) => {
                   e.currentTarget.style.transform = 'translateY(-4px)';
                   e.currentTarget.style.boxShadow = '0 8px 15px rgba(0, 0, 0, 0.15)';
