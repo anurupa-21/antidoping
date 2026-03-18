@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Macondo&family=Playwrite+IN:wght@100..400&display=swap');
+
+.home {
+  font-family: 'Macondo', cursive; /* Applies imported font */
+}
+
+/* Home Page Body */
+.home-body {
+  position: relative;
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover; /* Ensures image covers the area without distortion */
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a dark overlay */
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.carousel-caption h5 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #282c34;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 18px;
+}
+
+.footer-link {
+  color: orange !important;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.social-media {
+  margin-top: 20px;
+}
+
+/* Ensure icons use a compatible font */
+.social-icon {
+  font-family: Arial, sans-serif !important; /* Forces icons to use a font that supports them */
+  width: 24px;
+  height: 24px;
+  margin: 0 10px;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,149 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+}
+
+.sidebar {
+  background-color: #000000;
+  color: white;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-open {
+  width: 280px;
+}
+
+.sidebar-closed {
+  width: 60px;
+}
+
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+  background-color: #333;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  background-color: #333;
+  border-left-color: #007bff;
+}
+
+.sidebar-icon {
+  min-width: 20px;
+  margin-right: 12px;
+}
+
+.sidebar-closed .sidebar-icon {
+  margin-right: 0;
+}
+
+.sidebar-label {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.sidebar-closed .sidebar-label {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main-content {
+  flex: 1;
+  background-color: #708090;
+  transition: margin-left 0.3s ease;
+  min-height: 200vh;
+}
+
+.main-content-shifted {
+  margin-left: 280px;
+}
+
+.main-content-full {
+  margin-left: 60px;
+}
+
+@media (max-width: 768px) {
+  .sidebar-open {
+    width: 250px;
+  }
+
+  .main-content-shifted {
+    margin-left: 250px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar {
+    position: fixed;
+    z-index: 1001;
+  }
+
+  .sidebar-closed {
+    width: 0;
+  }
+
+  .main-content-full {
+    margin-left: 0;
+  }
+
+  .main-content-shifted {
+    margin-left: 0;
+  }
+}
+
+.sidebar-item:focus {
+  outline: 2px solid #007bff;
+  outline-offset: -2px;
+}
+
+.sidebar-toggle:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
